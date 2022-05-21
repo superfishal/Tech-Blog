@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+ <header>
+    <h1>
+      <a href="/">Tech Blog - Web Development / Web3 / Culture</a>
+    </h1>
+<nav>
+  {{#if loggedIn}}
+  <a href="/dashboard">dashboard</a>
+  <button id="logout" class="btn-no-style">Logout</button>
+  {{else}}
+  <a href="/login">Login</a>
+  {{/if}}
+</nav>
+  </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+  Built by <a href="https://github.com/superfishal">Superfishal</a>
+    </footer>
+  </div>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

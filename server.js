@@ -6,7 +6,7 @@ const path = require("path");
 const helpers = require("./utils/helpers");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
-const hbs = exphbs.create();
+const hbs = exphbs.create({ helpers });
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Express Port

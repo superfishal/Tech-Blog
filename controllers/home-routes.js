@@ -37,6 +37,7 @@ router.get("/", (req, res) => {
 });
 // get single post
 router.get("/post/:id", (req, res) => {
+  console.log("==========SINGLE-POST LOAD============");
   Post.findOne({
     where: {
       id: req.params.id,
@@ -78,6 +79,7 @@ router.get("/post/:id", (req, res) => {
 
 // login page
 router.get("/login", (req, res) => {
+  console.log("==========LOG IN PAGE LOAD============");
   if (req.session.loggedIn) {
     res.redirect("/");
     return;

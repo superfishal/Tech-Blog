@@ -2,10 +2,7 @@
   <div>
   <h3> {{ title }}</h3>
   <h5 class="author">Posted by {{user.username}} on {{format_date created_at}}</h5>
-  </div>
-  <div class="body">
-    {{!-- body from Post model --}}
-  {{ body }} 
+    {{ body }} 
   </div>
   <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
 </article>
